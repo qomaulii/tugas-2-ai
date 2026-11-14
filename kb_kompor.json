@@ -1,0 +1,88 @@
+{
+  "judul": "Risiko kebakaran dan kebocoran gas pada kompor gas portabel (kaleng butana) di ruang kos",
+  "batas": "Aturan berasal dari satu artikel jurnal Universitas Mataram, satu artikel Ditjen Migas Kementerian ESDM, dan satu buku pedoman pencegahan kebakaran (UNY) tentang kompor LPG rumah tangga. Butana adalah salah satu komponen LPG dan gas mudah terbakar yang dibahas sumber tersebut. Cakupannya hanya risiko kebocoran gas, ledakan, dan kebakaran pada kompor, tabung, dan penempatannya di ruang kos. Hasilnya saran awal berbasis checklist, bukan keputusan akhir, dan tidak menggantikan pemeriksaan teknisi atau petugas pemadam kebakaran.",
+  "sumber": {
+    "S1": "Pelatihan Perawatan Kompor LPG Rumah Tangga untuk Pencegahan Bahaya Kebakaran, I M. Mara dkk., Jurnal Karya Pengabdian Vol. 5 No. 2, Universitas Mataram, Oktober 2023, https://jkp.unram.ac.id/index.php/JKP/article/download/159/175/790, diakses 14 Nov 2026",
+    "S2": "Hindari Kecelakaan Saat Memasak, Jangan Lupa Periksa Selang dan Regulator LPG, Direktorat Jenderal Minyak dan Gas Bumi, Kementerian ESDM, https://migas.esdm.go.id/post/hindari-kecelakaan-saat-memasak-jangan-lupa-periksa-selang-dan-regulator-lpg, diakses 14 Nov 2026",
+    "S3": "Buku Pedoman Pencegahan Kebakaran, Ketut Ima Ismara dkk., CV Bintang Semesta Media, Juli 2025, ISBN 978-623-129-543-9, https://k3.uny.ac.id/sites/k3.uny.ac.id/files/%5BE-BOOK%20FC%5D%20BUKU%20PEDOMAN%20PENCEGAHAN%20KEBAKARAN.pdf, diakses 14 Nov 2026"
+  },
+  "aturan": [
+    {
+      "id": "R1", 
+      "jika": ["tercium bau gas", 
+        "terdengar bunyi mendesis", 
+        "api tidak menyala tetapi gas terus keluar"], 
+      "mode": "atau", 
+      "maka": "indikasi kebocoran gas", 
+      "sumber": "S2; S1 hlm. 70"},
+
+    {
+      "id": "R2",
+      "jika": ["selang getas atau rusak", 
+        "regulator atau katup rusak"], 
+      "mode": "atau", 
+      "maka": "aksesori kompor rusak", 
+      "sumber": "S2; S1 hlm. 67"},
+
+    {
+      "id": "R3", 
+      "jika": ["indikasi kebocoran gas", 
+        "ruang tertutup tanpa ventilasi"],
+      "mode": "dan",
+      "maka": "gas terakumulasi",
+      "sumber": "S1 hlm. 67; S3 hlm. 20"},
+
+    {
+      "id": "R4",
+      "jika": ["gas terakumulasi",
+        "ada api atau sumber panas"],
+        "mode": "dan",
+        "maka": "risiko ledakan atau kebakaran tinggi",
+        "sumber": "S1 hlm. 67, 70; S3 hlm. 16-17, 27"},
+
+    {
+      "id": "R5",
+      "jika": ["aksesori kompor rusak",
+      "tabung berkarat atau penyok"],
+      "mode": "atau",
+      "maka": "komponen perlu diganti",
+      "sumber": "S2"},
+
+    {
+      "id": "R6",
+      "jika": ["kompor tidak berada di permukaan datar",
+        "ada bahan mudah terbakar dekat kompor",
+        "tabung terkena panas langsung"], 
+      "mode": "atau", 
+      "maka": "penempatan tidak aman", 
+      "sumber": "S2; S1 hlm. 67; S3 hlm. 15, 65"},
+
+    {
+      "id": "R7", 
+      "jika": ["indikasi kebocoran gas"], 
+      "mode": "dan", 
+      "maka": "jangan nyalakan kompor sebelum bau hilang dan periksa regulator", 
+      "sumber": "S2"},
+
+    {
+      "id": "R8", 
+      "jika": ["kompor ditinggalkan dalam keadaan menyala"], 
+      "mode": "dan",
+      "maka": "kompor harus dimatikan setelah selesai dipakai",
+      "sumber": "S3 hlm. 5, 64"},
+
+    {
+      "id": "R9",
+      "jika": ["kompor kotor oleh sisa masakan"],
+      "mode": "dan",
+      "maka": "kompor perlu dibersihkan",
+      "sumber": "S1 hlm. 67, 70-71"},
+      
+    {
+      "id": "R10", 
+      "jika": ["kompor atau perlengkapannya tidak berstandar SNI"],
+      "mode": "dan",
+      "maka": "ganti dengan perlengkapan berstandar SNI",
+      "sumber": "S2; S1 hlm. 71"}
+  ]
+}
